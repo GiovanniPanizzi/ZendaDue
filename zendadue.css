@@ -410,13 +410,18 @@ html{
 
 /*configurazione media*/
 @media (hover: hover){
+    
     .hamburger-menu:hover .stick {
-    background-color: var(--color-4);
+        background-color: var(--color-4);
     }
     .main-nav-ul li:hover {
+        background-color: var(--color-5);
+    }
     
-    background-color: var(--color-5);
-}
+    .mobile-nav-item-link:hover {
+        color: var(--color-4);
+    }
+    
 }
 @media (max-width: 950px){
     .main-nav{
@@ -453,10 +458,6 @@ html{
         display: flex;
         flex-direction: column;   
         height: 50%;
-    }
-    
-    .mobile-nav-item-link:hover {
-        color: var(--color-4);
     }
     
     .hamburger-menu.active .stick:nth-child(2){opacity:0;}
