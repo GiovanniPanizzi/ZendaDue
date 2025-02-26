@@ -15,7 +15,7 @@
                     <nav class="main-nav">
                         <ul class="main-nav-ul">
                             <li id="collection-li">
-                                <a href="#"><span class="nav-text">COLLEZIONE</span></a>
+                                <a href=#><span class="nav-text">COLLEZIONE</span></a>
                             <li id="home-li">
                                 <a href="#"><span class="nav-text">HOME</span></a>
                                 <img>
@@ -43,10 +43,6 @@
                         <span class="stick"></span>
                         <span class="stick"></span>
                     </div>
-
-                    <nav class="mobile-nav">
-                        
-                    </nav>
                     
                     <div class="social-links">
                         <ul id="social-links-ul">
@@ -63,24 +59,33 @@
                     </div>
                 </div>
             </header>
+        
+            <div class="mobile-menu">
+                <ul class="mobile-nav">
+                    <li class="mobile-nav-item"><a href="#hero-section" class="mobile-nav-item-link">Home</a></li>
+                    <li class="mobile-nav-item"><a href="#hero-section" class="mobile-nav-item-link">About</a></li>
+                    <li class="mobile-nav-item"><a href="#hero-section" class="mobile-nav-item-link">Music</a></li>
+                    <li class="mobile-nav-item"><a href="#hero-section" class="mobile-nav-item-link">Contact</a></li>
+                </ul>
+            </div>
             
             <main class="main-content">
                 <div id="hero-section" class="section">
                     <div id="swiping-collection"></div>
                 </div>
-                <div id="collection-links-section" class="section">
+                <section id="collection-links-section" class="section">
                     <ul id="collection-links">
-                        <li id="lazenda-li"><a href="#"><span>COLLEZIONE LA ZENDA</span></a></li>
+                        <li id="lazenda-li"><a href="#lazenda-collection"><span>COLLEZIONE LA ZENDA</span></a></li>
                         <li><span id="divider-1" class="divider"></span></li>
-                        <li id="petiteeco-li"><a href="#"><span>COLLEZIONE PETITE ECO</span></a></li>
+                        <li id="petiteeco-li"><a href="#petiteeco-collection"><span>COLLEZIONE PETITE ECO</span></a></li>
                         <li><span id="divider-2" class="divider"></span></li>
-                        <li id="2021-li"><a href="#"><span>COLLEZIONE 2021</span></a></li>
+                        <li id="2021-li"><a href="#2021-collection"><span>COLLEZIONE 2021</span></a></li>
                         <li><span id="divider-3" class="divider"></span></li>
-                        <li id="piumini-li"><a href="#"><span>COLLEZIONE ECO PIUMINI</span></a></li>
+                        <li id="piumini-li"><a href="#ecopiumini-collection"><span>COLLEZIONE ECO PIUMINI</span></a></li>
                         <li><span id="divider-4" class="divider"></span></li>
                     </ul>
-                </div>
-                <div id="lazenda-section" class="section">
+                </section>
+                <section id="lazenda-section" class="section">
                     <article id="lazenda-collection">
                         <div id="lazenda-text">
                             <h2 id="lazenda-h2-first">COLLEZIONE</h2>
@@ -89,8 +94,8 @@
                         </div>
                         <div id="lazenda-img"></div>
                     </article>
-                </div>
-                <div id="petiteeco-section" class="section">
+                </section>
+                <section id="petiteeco-section" class="section">
                     <article id="petiteeco-collection">
                         <div id="petiteeco-text">
                             <h2 id="petiteeco-h2-first">COLLEZIONE</h2>
@@ -99,7 +104,7 @@
                         </div>
                         <div id="petiteeco-img"></div>
                     </article>
-                </div>
+                </section>
             </main>
     
             <footer>
@@ -131,12 +136,23 @@
             </script>
             
             <script id="hamburgerMenu">
-                const hamburger = document.querySelection(".hamburger-menu");
-                const mobileNav = document.querySelector(".mobile-nav");
+                const hamburger = document.querySelector(".hamburger-menu");
+                const mobileNav = document.querySelector(".mobile-menu");
+                const mobileNavItemLink = document.querySelectorAll(".mobile-nav-item-link");
                 hamburger.addEventListener ("click", () => {
-                    hamburger.classList.add ("active");
+                    hamburger.classList.toggle ("active");
+                    hamburger.classList.toggle ("inactive");
+                    mobileNav.classList.toggle ("active");
                 });
                 
+                mobileNavItemLink.forEach(item => {
+                    item.addEventListener("click", () => {
+                    console.log("ciao");
+                    hamburger.classList.remove("active");
+                    hamburger.classList.add("inactive");
+                    mobileNav.classList.remove("active");
+                    });
+                });
             </script>
         
         
