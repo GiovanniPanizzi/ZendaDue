@@ -57,6 +57,10 @@ body{
     flex-direction: column;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* header general */
 
 .header{
@@ -228,8 +232,12 @@ body{
     width:35px;
     height:3px;
     margin: 8px auto;
-    
 }
+
+.mobile-menu {
+        opacity: 0;
+        display: none;
+    }
 
 /* main page general */
 
@@ -246,6 +254,7 @@ body{
 
 #hero-section{
     position: relative;
+    top: 0;
     height: 400px;
     width: 100%;
     background-color: var(--color-1);
@@ -302,13 +311,13 @@ body{
     position: relative;
     margin-top: 40px;
     border-top: 1px solid var(--color-2);
-    height: 1400px;
+    height: 1600px;
     width: 100%;
     background-color: var(--color-1);
 }
 
 #lazenda-collection{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     top: 0;
@@ -357,6 +366,14 @@ body{
     border-top: 30px solid var(--color-3);
 }
 
+#lazenda-collection{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
 #petiteeco-text{
     position: relative;
     top: 0;
@@ -394,7 +411,7 @@ body{
 /*configurazione media*/
 @media (hover: hover){
     .hamburger-menu:hover .stick {
-    background-color: var(--color-3);
+    background-color: var(--color-4);
     }
     .main-nav-ul li:hover {
     
@@ -407,6 +424,49 @@ body{
     }
     .hamburger-menu{
         display: block;
+    }
+    .mobile-menu.active {
+        display: flex;
+        position: fixed;
+        opacity: 1;
+        background-color: var(--color-1);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .mobile-menu.inactive {
+        display: none !important;
+    }
+    
+    .mobile-menu {
+        opacity: 0;
+        display: none;
+    }
+    
+    .mobile-nav {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;   
+        height: 50%;
+    }
+    
+    .mobile-nav-item-link:hover {
+        color: var(--color-4);
+    }
+    
+    .hamburger-menu.active .stick:nth-child(2){opacity:0;}
+    .hamburger-menu.active .stick:nth-child(1){transform: translateY(11px) rotate(45deg);}
+    .hamburger-menu.active .stick:nth-child(3){transform: translateY(-11px) rotate(-45deg);}
+    .hamburger-menu.active .stick{color: white;}
+    
+    .mobile-nav-item{
+        flex: 1;
+        font-size: 40px;
     }
     
     .social-links{
