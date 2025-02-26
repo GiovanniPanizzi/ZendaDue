@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>ZendaDue | Official website | Collection</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="zendadue.css">    
+    </head>
+    <body>
+            <header class="header">
+                <div class="header-container">
+                    <div class="logo">
+                        <img id="logo-img" src="img/zendaduelogo.png" height="60px">
+                    </div>
+                    <nav class="main-nav">
+                        <ul class="main-nav-ul">
+                            <li id="collection-li">
+                                <a href="#"><span class="nav-text">COLLEZIONE</span></a>
+                            <li id="home-li">
+                                <a href="#"><span class="nav-text">HOME</span></a>
+                                <img>
+                            </li>
+                            <li id="crueltyfree-li">
+                                <a href="#"><div id="double-text" class="nav-text"><span>CRUELTY </span><span id="green-span">FREE</span></div></a>
+                            </li>
+                            <li id="temporary-li">
+                                <a href="#"><span class="nav-text">TEMPORARY</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="collection-menu">
+                        <ul id="collection-ul">
+                            <li><a href=#><span class="collection">COLLEZIONE LA ZENDA</span></a></li>
+                            <li><a href=#><span class="collection">COLLEZIONE PETITE ECO</span></a></li>
+                            <li><a href=#><span class="collection">COLLEZIONE 2021</span></a></li>
+                            <li><a href=#><span class="collection">COLLEZIONE ECO PIUMINI</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hamburger-menu">
+                        <span class="stick"></span>
+                        <span class="stick"></span>
+                        <span class="stick"></span>
+                    </div>
+
+                    <nav class="mobile-nav">
+                        
+                    </nav>
+                    
+                    <div class="social-links">
+                        <ul id="social-links-ul">
+                            <li class="social-links-item">
+                                <a id="youtube-link" href="#"><img id="youtube-logo"></a>
+                            </li>
+                            <li class="social-links-item">
+                                <a id="facebook-link" href="#"><img id="facebook-logo"></a>
+                            </li>
+                            <li class="social-links-item">
+                                <a id="instagram-link" href="#"><img id="instagram-logo"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            
+            <main class="main-content">
+                <div id="hero-section" class="section">
+                    <div id="swiping-collection"></div>
+                </div>
+                <div id="collection-links-section" class="section">
+                    <ul id="collection-links">
+                        <li id="lazenda-li"><a href="#"><span>COLLEZIONE LA ZENDA</span></a></li>
+                        <li><span id="divider-1" class="divider"></span></li>
+                        <li id="petiteeco-li"><a href="#"><span>COLLEZIONE PETITE ECO</span></a></li>
+                        <li><span id="divider-2" class="divider"></span></li>
+                        <li id="2021-li"><a href="#"><span>COLLEZIONE 2021</span></a></li>
+                        <li><span id="divider-3" class="divider"></span></li>
+                        <li id="piumini-li"><a href="#"><span>COLLEZIONE ECO PIUMINI</span></a></li>
+                        <li><span id="divider-4" class="divider"></span></li>
+                    </ul>
+                </div>
+                <div id="lazenda-section" class="section">
+                    <article id="lazenda-collection">
+                        <div id="lazenda-text">
+                            <h2 id="lazenda-h2-first">COLLEZIONE</h2>
+                            <h2 id="lazenda-h2-second">LA ZENDA</h2>
+                            <p id="lazenda-p">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                        </div>
+                        <div id="lazenda-img"></div>
+                    </article>
+                </div>
+                <div id="petiteeco-section" class="section">
+                    <article id="petiteeco-collection">
+                        <div id="petiteeco-text">
+                            <h2 id="petiteeco-h2-first">COLLEZIONE</h2>
+                            <h2 id="petiteeco-h2-second">PETITE ECO</h2>
+                            <p id="petiteeco-p">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                        </div>
+                        <div id="petiteeco-img"></div>
+                    </article>
+                </div>
+            </main>
+    
+            <footer>
+            </footer>
+        
+            <script id="collectionMenu">
+                const collectionMenu = document.querySelector(".collection-menu");
+                const collectionli = document.querySelector("#collection-li");
+                let isOverMenu = false;
+                collectionli.addEventListener ("mouseenter", () => {
+                collectionMenu.classList.add ("active");
+                });
+                collectionli.addEventListener("mouseleave", () => {
+                    setTimeout(() => {
+                        if(!isOverMenu){
+                            collectionMenu.classList.remove("active");
+                        }
+                    }, 100);
+                });
+                
+                collectionMenu.addEventListener ("mouseenter", () => {
+                isOverMenu = true;
+                });
+                collectionMenu.addEventListener ("mouseleave", () => {
+                isOverMenu = false;
+                collectionMenu.classList.remove("active");
+                });
+                
+            </script>
+            
+            <script id="hamburgerMenu">
+                const hamburger = document.querySelection(".hamburger-menu");
+                const mobileNav = document.querySelector(".mobile-nav");
+                hamburger.addEventListener ("click", () => {
+                    hamburger.classList.add ("active");
+                });
+                
+            </script>
+        
+        
+    </body>
+</html>
