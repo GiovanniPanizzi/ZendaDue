@@ -412,14 +412,14 @@ html{
 @media (hover: hover){
     
     .hamburger-menu:hover .stick {
-        background-color: var(--color-4);
+        background-color: var(--color-5);
     }
     .main-nav-ul li:hover {
         background-color: var(--color-5);
     }
     
     .mobile-nav-item-link:hover {
-        color: var(--color-4);
+        color: var(--color-5);
     }
     
 }
