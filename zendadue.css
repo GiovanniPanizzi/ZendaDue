@@ -300,6 +300,73 @@ html{
     border-bottom: 30px solid var(--color-3);
 }
 
+#hero-section img{
+    position: relative;
+}
+
+#swiping-collection{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 3000px;
+}
+
+#left-swiping-button{
+    position: absolute;
+    border: 3px solid var(--color-1);
+    top: 50%;
+    left: var(--margin-m);
+    transform: translate(0, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#right-swiping-button{
+    position: absolute;
+    border: 3px solid var(--color-1);
+    top: 50%;
+    right: var(--margin-m);
+    transform: translate(0, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.wood {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-1);
+    transform: translate(-50%, -50%);
+}
+
+.pointer{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#left-pointer{
+    border-left: 2px solid var(--color-1);
+    border-bottom: 2px solid var(--color-1);
+}
+
+#right-pointer{
+    border-right: 2px solid var(--color-1);
+    border-top: 2px solid var(--color-1);
+}
+
 #collection-links-section{
     position: relative;
     margin-top: 40px;
@@ -496,6 +563,7 @@ html{
         display: flex;
         flex-direction: column;   
         height: 50%;
+        text-align: center;
     }
     
     .hamburger-menu.active .stick:nth-child(2){opacity:0;}
