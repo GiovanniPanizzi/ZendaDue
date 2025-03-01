@@ -532,35 +532,61 @@ html{
     .hamburger-menu{
         display: block;
     }
+
+    @keyframes mobile-menu-open {
+        from {height: 0;}
+        to {height: 300px;}
+    }
+
+    @keyframes mobile-menu-close {
+        from {height: 300px;}
+        to {height: 0;}
+    }
+
     .mobile-menu.active {
+        opacity: 1;
+        height: 300px;
+        animation-name: mobile-menu-open;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.5s;
+        pointer-events: all;
+        background-color: var(--color-3);
+        box-shadow: 0px 10px 10px var(--color-4);
+        
+    }
+
+    .mobile-menu.inactive {
+        opacity: 1;
+        animation-name: mobile-menu-close;
+        animation-timing-function: ease-in-out;
+        width: 100%;
+        animation-duration: 0.5s;
+        pointer-events: none;
+        background-color: var(--color-3);
+    }
+
+    .mobile-menu {
+        pointer-events: none;
         display: flex;
         position: fixed;
-        opacity: 1;
-        background-color: var(--color-1);
-        height: 100vh;
+        background-color: var(--color-3);
         width: 100%;
         top: 0;
         left: 0;
         z-index: 1;
     }
-    .mobile-menu.inactive {
-        display: none !important;
-    }
-    
-    .mobile-menu {
-        opacity: 0;
-        display: none;
-    }
     
     .mobile-nav {
         position: absolute;
+        bottom: 60px;
         left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%);
         display: flex;
         flex-direction: column;   
         height: 50%;
         text-align: center;
+        gap: var(--margin-l);
+        overflow: hidden;
     }
     
     .hamburger-menu.active .stick:nth-child(2){opacity:0;}
@@ -569,8 +595,11 @@ html{
     .hamburger-menu.active .stick{color: var(--color-1);}
     
     .mobile-nav-item{
-        flex: 1;
         font-size: 20px;
+    }
+
+    .mobile-nav-item a {
+        color: var(--color-1);
     }
     
     .social-links{
