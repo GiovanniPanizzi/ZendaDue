@@ -71,7 +71,7 @@ html{
     left: 0;
     background-color: var(--color-1);
     z-index: 2;
-    border-bottom: 1px solid var(--color-2);
+    box-shadow: 0px 5px 5px var(--color-4);
 }
 
 .header-container{
@@ -143,12 +143,6 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    /*
-    height: 50%;
-    border-left: 1px solid var(--color-2);
-    */
-    
     width: 100%;
 }
 
@@ -304,17 +298,18 @@ html{
     position: relative;
 }
 
-#swiping-collection{
+#sliding-collection{
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     display: flex;
     flex-direction: row;
-    width: 3000px;
+    width: 100vw;
+    transition: transform 0.5s ease-in-out; 
 }
 
-#left-swiping-button{
+#left-sliding-button{
     position: absolute;
     border: 3px solid var(--color-1);
     top: 50%;
@@ -326,7 +321,7 @@ html{
     cursor: pointer;
 }
 
-#right-swiping-button{
+#right-sliding-button{
     position: absolute;
     border: 3px solid var(--color-1);
     top: 50%;
@@ -513,7 +508,7 @@ html{
     height: 1200px;
 }
 
-/*configurazione media*/
+/* media configuration*/
 @media (hover: hover){
     
     .hamburger-menu:hover .stick {
@@ -569,7 +564,7 @@ html{
     .hamburger-menu.active .stick:nth-child(2){opacity:0;}
     .hamburger-menu.active .stick:nth-child(1){transform: translateY(11px) rotate(45deg);}
     .hamburger-menu.active .stick:nth-child(3){transform: translateY(-11px) rotate(-45deg);}
-    .hamburger-menu.active .stick{color: white;}
+    .hamburger-menu.active .stick{color: var(--color-1);}
     
     .mobile-nav-item{
         flex: 1;
