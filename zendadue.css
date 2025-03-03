@@ -255,6 +255,7 @@ html{
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    pointer-events: all;
     display: none;
 }
 
@@ -307,24 +308,21 @@ html{
 
 }
 
-#sliding-collection li{
-    
-}
-
 #left-sliding-button{
     position: absolute;
     border: 2px solid var(--color-1);
+    background-color: transparent;
     top: 50%;
     left: var(--margin-m);
     transform: translate(0, -50%);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    cursor: pointer;
 }
 
 #right-sliding-button{
     position: absolute;
+    background-color: transparent;
     border: 2px solid var(--color-1);
     top: 50%;
     right: var(--margin-m);
@@ -332,7 +330,6 @@ html{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    cursor: pointer;
 }
 
 .wood {
@@ -531,6 +528,7 @@ html{
     }
     .hamburger-menu{
         display: block;
+        border: none;
     }
 
     @keyframes mobile-menu-open {
@@ -544,36 +542,36 @@ html{
     }
 
     .mobile-menu.active {
-        opacity: 1;
         height: 300px;
         animation-name: mobile-menu-open;
-        animation-timing-function: ease-in-out;
-        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
+        animation-duration: 0.3s;
         pointer-events: all;
         background-color: var(--color-3);
         box-shadow: 0px 10px 10px var(--color-4);
         
     }
 
-    .mobile-menu.inactive {
-        opacity: 1;
+    .mobile-menu.close {
         animation-name: mobile-menu-close;
         animation-timing-function: ease-in-out;
-        width: 100%;
-        animation-duration: 0.5s;
+        animation-duration: 0.3s;
         pointer-events: none;
         background-color: var(--color-3);
     }
 
     .mobile-menu {
+        opacity: 1;
         pointer-events: none;
         display: flex;
         position: fixed;
         background-color: var(--color-3);
-        width: 100%;
+        width: 60%;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translate(-50%);
         z-index: 1;
+        pointer-events: none;
     }
     
     .mobile-nav {
@@ -586,7 +584,10 @@ html{
         height: 50%;
         text-align: center;
         gap: var(--margin-l);
-        overflow: hidden;
+    }
+
+    .mobile-nav li{
+        border-bottom: 1px solid var(--color-1);
     }
     
     .hamburger-menu.active .stick:nth-child(2){opacity:0;}
@@ -596,6 +597,7 @@ html{
     
     .mobile-nav-item{
         font-size: 20px;
+        overflow: hidden;
     }
 
     .mobile-nav-item a {
