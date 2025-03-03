@@ -25,7 +25,7 @@
     --color-2: black;
     --color-3: rgb(0, 150, 64); 
     --color-4: rgba(0, 0, 0, 0.4);
-    --color-5: #bfc6d8ee;
+    --color-5: #aca8a8;
 }
 
 /* general */
@@ -318,6 +318,7 @@ html{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 #right-sliding-button{
@@ -330,6 +331,7 @@ html{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .wood {
